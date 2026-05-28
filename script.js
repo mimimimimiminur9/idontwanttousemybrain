@@ -30,4 +30,13 @@ function updateTotal() {
 
 function reset() {
     location.reload();
+
+btn.innerHTML = `
+    <div style="font-weight:bold; margin-bottom: 5px;">$${val}</div>
+    <div class="controls">
+        <span class="minus" onclick="event.stopPropagation(); updateCount(${val}, -1)">-</span>
+        <span class="count" id="count-${val}">0</span>
+        <span class="plus" onclick="event.stopPropagation(); updateCount(${val}, 1)">+</span>
+    </div>
+`;
 }
