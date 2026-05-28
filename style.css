@@ -19,15 +19,12 @@ body {
     max-width: 400px;
     text-align: center;
 }
-/* 按鈕容器佈局 */
 #buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin: 20px 0;
 }
-
-/* 按鈕的基本樣式 */
 button {
     background: rgba(255, 255, 255, 0.2);
     color: white;
@@ -48,4 +45,14 @@ button:active {
     border: none;
     margin-top: 10px;
     font-weight: bold;
+}
+#total-container {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+#total {
+    font-size: 2.5rem;
+    color: #4CAF50; 
 }
