@@ -18,7 +18,7 @@ denominations.forEach(val => {
 });
 
 function updateCount(val, delta) {
-    counts[val] = Math.max(0, counts[val] + delta); 
+    counts[val] = Math.max(0, counts[val] + delta);
     document.querySelector(`button:nth-child(${denominations.indexOf(val) + 1}) .count`).innerText = counts[val];
     updateTotal();
 }
@@ -30,13 +30,4 @@ function updateTotal() {
 
 function reset() {
     location.reload();
-
-btn.innerHTML = `
-    <div style="font-weight:bold; margin-bottom: 5px;">$${val}</div>
-    <div class="controls">
-        <span class="minus" onclick="event.stopPropagation(); updateCount(${val}, -1)">-</span>
-        <span class="count" id="count-${val}">0</span>
-        <span class="plus" onclick="event.stopPropagation(); updateCount(${val}, 1)">+</span>
-    </div>
-`;
 }
