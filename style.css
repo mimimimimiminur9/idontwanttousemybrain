@@ -32,7 +32,7 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     padding: 15px 5px;
-    font-size: 20px;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -70,6 +70,11 @@ button:active {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    .val-text {
+    font-size: 1.5rem;    
+    font-weight: 800;    
+    margin-bottom: 5px;
+}
 }
 
 .controls {
