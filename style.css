@@ -9,11 +9,4 @@ body {
     padding: 20px;
     margin: 0;
     min-height: 100vh; /* 確保背景填滿整個螢幕高度 */
-  #app {
-    background: rgba(255, 255, 255, 0.1); /* 半透明白色底 */
-    backdrop-filter: blur(10px);         /* 模糊背景效果 */
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
 }
