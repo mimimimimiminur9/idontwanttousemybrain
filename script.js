@@ -5,14 +5,23 @@ const container = document.getElementById('buttons');
 denominations.forEach(val => {
     counts[val] = 0;
     const btn = document.createElement('button');
-    btn.innerHTML = `$${val}<br>${counts[val]}`;
-    btn.onclick = () => {
-        counts[val]++;
-        btn.innerHTML = `$${val}<br>${counts[val]}`;
-        updateTotal();
-    };
+    btn.className = 'money-btn';
+    btn.innerHTML = `
+        <span class="val-text">$${val}</span>
+        <div class="controls">
+            <span class="minus" onclick="event.stopPropagation(); updateCount(${val}, -1)">-</span>
+            <span class="count">${counts[val]}</span>
+            <span class="plus" onclick="event.stopPropagation(); updateCount(${val}, 1)">+</span>
+        </div>
+    `;
     container.appendChild(btn);
 });
+
+function updateCount(val, delta) {
+    counts[val] = Math.max(0, counts[val] + delta); 
+    document.querySelector(`button:nth-child(${denominations.indexOf(val) + 1}) .count`).innerText = counts[val];
+    updateTotal();
+}
 
 function updateTotal() {
     let total = denominations.reduce((sum, val) => sum + (val * counts[val]), 0);
@@ -20,6 +29,5 @@ function updateTotal() {
 }
 
 function reset() {
-    denominations.forEach(val => counts[val] = 0);
     location.reload();
 }
