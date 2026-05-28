@@ -1,12 +1,51 @@
 body {
-    /* 使用漸層背景，從深灰到全黑 */
-    background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
-    background-attachment: fixed; /* 讓背景固定，滑動頁面時不會跟著動 */
+    background: linear-gradient(135deg, #2c3e50 0%, #000000 100%); 
+    background-attachment: fixed;
     color: white;
     font-family: sans-serif;
     display: flex;
     justify-content: center;
     padding: 20px;
     margin: 0;
-    min-height: 100vh; /* 確保背景填滿整個螢幕高度 */
+    min-height: 100vh;
+}
+#app {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);         
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+/* 按鈕容器佈局 */
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* 按鈕的基本樣式 */
+button {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 15px 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+button:active {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(0.95); 
+}
+#reset-btn {
+    width: 100%;
+    background: rgba(231, 76, 60, 0.6); 
+    border: none;
+    margin-top: 10px;
+    font-weight: bold;
 }
