@@ -31,7 +31,8 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     padding: 15px 5px;
-    font-size: 14px;
+    font-size: 30px;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.2s ease;
 }
@@ -53,6 +54,7 @@ button:active {
     margin: 20px 0;
 }
 #total {
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: #4CAF50; 
+    font-weight: bold;
 }
