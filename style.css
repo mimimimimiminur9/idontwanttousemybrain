@@ -1,124 +1,92 @@
 body {
     background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
-    background-attachment: fixed;
+    background-attachment: fixed; 
     color: white;
     font-family: sans-serif;
-
     display: flex;
-    justify-content: center; 
-    align-items: center;    
-    
-    min-height: 100vh;
-    margin: 0;
+    justify-content: center;
     padding: 20px;
+    margin: 0;
+    min-height: 100vh; 
 }
-
 #app {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px);        
     padding: 30px;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    
-    width: 90%; 
-    max-width: 500px; 
-    
-    margin: auto;
-    text-align: center;
-    box-sizing: border-box; 
 }
-*, *:before, *:after {
-    box-sizing: border-box;
-}
+
+
 #buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 8px; 
+    gap: 10px;
     margin: 20px 0;
-    width: 100%; 
 }
+
+
 button {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2); 
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     padding: 15px 5px;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 20px;
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
+
 button:active {
     background: rgba(255, 255, 255, 0.4);
     transform: scale(0.95); 
 }
+
+
 #reset-btn {
     width: 100%;
     background: rgba(231, 76, 60, 0.6); 
     border: none;
     margin-top: 10px;
     font-weight: bold;
+    user-select: none; 
+    -webkit-user-select: none;
 }
 #total-container {
     background: rgba(0, 0, 0, 0.2);
-    padding: 10px 50px;
+    padding: 10px;
     border-radius: 12px;
-    margin: 40px 0;
+    margin: 20px 0;
 }
+
 #total {
     font-size: 2.5rem;
     color: #4CAF50; 
-    font-weight: bold;
 }
 .money-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px 5px; 
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    width: 100%;
-    margin: 0;
+    padding: 10px;
 }
-
 
 .controls {
     display: flex;
+    gap: 10px;
     align-items: center;
-    justify-content: center;
-    gap: 10px; 
-    margin-top: 10px;
-    width: 100%;
+    margin-top: 5px;
 }
-
 
 .minus, .plus {
-    background: rgba(255, 255, 255, 0.2);
-    width: 50px;    
-    height: 50px;   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 8px; 
-    font-size: 24px;
-    font-weight: bold;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 5px 12px;
+    border-radius: 8px;
     cursor: pointer;
-    user-select: none;
+    font-weight: bold;
 }
 
-
-.count {
-    background: rgba(0, 0, 0, 0.2);
-    width: 50px;    
-    height: 50px;   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    font-size: 1.5rem;
-    font-weight: bold;
+.minus:active, .plus:active {
+    background: rgba(255, 255, 255, 0.6);
 }
